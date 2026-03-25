@@ -1,0 +1,7 @@
+#!/system/bin/sh
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+TOP=$(CDPATH= cd -- "$DIR/.." && pwd)
+export PYTHONHOME="$DIR"
+export PYTHONPATH="$DIR/lib/python3.14:$DIR/lib/python3.14/site-packages"
+export LD_LIBRARY_PATH="$TOP/lib:$DIR/lib"
+exec "$DIR/lib/libpython3.14.so" "$@"

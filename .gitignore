@@ -1,0 +1,13 @@
+build/
+dist/
+out/
+*.tar.gz
+*.whl
+*.zip
+*.zst
+*.log
+.venv/
+venv/
+__pycache__/
+*.pyc
+target/

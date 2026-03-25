@@ -1,0 +1,6 @@
+#!/system/bin/sh
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+export PYTHONHOME="$DIR/python"
+export PYTHONPATH="$DIR/python/lib/python3.14:$DIR/python/lib/python3.14/site-packages"
+export LD_LIBRARY_PATH="$DIR/lib:$DIR/python/lib"
+exec "$DIR/python/lib/libpython3.14.so" -m mitmproxy.tools.main mitmdump "$@"
